@@ -3,7 +3,7 @@
 get_header(); ?>
 
     <div class="page-banner">
-        <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('/images/ocean.jpg') ?>);"></div>
+        <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('/inc/images/ocean.jpg') ?>);"></div>
         <div class="page-banner__content container container--narrow">
             <h1 class="page-banner__title">Welcome to our blog!</h1>
             <div class="page-banner__intro">
@@ -17,8 +17,12 @@ get_header(); ?>
         while(have_posts()) {
             the_post(); ?>
             <div class="post-item">
+                <div class="hover6">
+                    <div class="hover07 column ">
+                        <figure><?php the_post_thumbnail('medium-large') ?></figure>
+                    </div>
+                </div>
                 <h2 class="headline headline--medium headline--post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-
                 <div class="metabox">
                     <p>Posted by <?php the_author_posts_link(); ?> on <?php the_time('n.j.y'); ?> in <?php echo get_the_category_list(', '); ?></p>
                 </div>

@@ -11,10 +11,10 @@ get_header(); ?>
             </div>
         </div>
     </div>
-<!--hello-->
+    <!--hello-->
     <div class="container container--narrow page-section">
         <?php
-        while(have_posts()) {
+        while (have_posts()) {
             the_post(); ?>
             <div class="post-item">
                 <div class="hover6">
@@ -28,7 +28,7 @@ get_header(); ?>
                 </div>
 
                 <div class="generic-content">
-                    <p><?php  echo wp_trim_words(get_the_content(),55); ?></p>
+                    <p><?php echo wp_trim_words(get_the_content(), 55); ?></p>
                     <p><a class="btn btn--blue" href="<?php the_permalink(); ?>">Continue reading &raquo;</a></p>
                 </div>
 

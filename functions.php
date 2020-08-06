@@ -24,5 +24,54 @@ function university_features() {
     require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
     add_theme_support('title-tag');
 }
-
 add_action('after_setup_theme', 'university_features');
+
+/**
+ * Add a Footer  sidebar.
+ */
+function university_footer_sidebar() {
+    register_sidebar( array(
+        'name'          => __( 'Footer 1', 'university' ),
+        'id'            => 'footer-1',
+        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'university' ),
+        'before_widget' => '<ul><li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li></ul>',
+        'before_title'  => '<h3 class="headline headline--small">',
+        'after_title'   => '</h3>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Footer 2', 'university' ),
+        'id'            => 'footer-2',
+        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'university' ),
+        'before_widget' => '<ul><li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li></ul>',
+        'before_title'  => '<h3 class="headline headline--small">',
+        'after_title'   => '</h3>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Footer 3', 'university' ),
+        'id'            => 'footer-3',
+        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'university' ),
+        'before_widget' => '<ul><li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li></ul>',
+        'before_title'  => '<h3 class="headline headline--small">',
+        'after_title'   => '</h3>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Footer 4', 'university' ),
+        'id'            => 'footer-4',
+        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'university' ),
+        'before_widget' => '<ul><li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li></ul>',
+        'before_title'  => '<h3 class="headline headline--small">',
+        'after_title'   => '</h3>',
+    ) );
+
+
+
+
+}
+add_action( 'widgets_init', 'university_footer_sidebar' );

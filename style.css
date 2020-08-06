@@ -1140,7 +1140,7 @@ body.login {
 }
 @media (min-width: 530px) {
     .page-banner__title {
-        font-size: 5rem
+        font-size: 40px;
     }
 }
 .page-banner__bg-image {
@@ -1160,7 +1160,8 @@ body.login {
 }
 @media (min-width: 530px) {
     .page-banner__intro {
-        font-size: 1.65rem
+        font-size: 17px;
+        letter-spacing: 1px;
     }
 }
 .page-banner__intro p {
